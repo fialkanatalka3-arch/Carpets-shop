@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { flushSync } from "react-dom";
-import { ShoppingBag, PackageOpen, X, Minus, Plus, Trash2, Check, LoaderCircle } from "lucide-react";
+import { ShoppingBag, PackageOpen, X, Minus, Plus, Trash2, Check, LoaderCircle, Phone, Music2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -160,7 +160,7 @@ export default function Storefront({ products }: { products: Product[] }) {
       <div className="container header-inner">
         <a href="/" aria-label="Kotys Carpet — головна"><Wordmark /></a>
         <div className="header-actions">
-          <nav className="header-links" aria-label="Головне меню"><a href="#catalog">Каталог</a><a href="#how-to-order">Як замовити</a></nav>
+          <nav className="header-links" aria-label="Головне меню"><a href="#catalog">Каталог</a><a href="#how-to-order">Як замовити</a><a href="#contacts">Контакти</a></nav>
           <Sheet open={cartOpen} onOpenChange={(open) => { if (!pending) setCartOpen(open); }}>
             <SheetTrigger asChild><Button variant="outline" className="cart-button" aria-label={"Відкрити кошик, килимів: " + count}>
               <ShoppingBag size={19} aria-hidden="true" /><span className="cart-label">Кошик</span><span className="cart-count">{count}</span>
@@ -246,7 +246,26 @@ export default function Storefront({ products }: { products: Product[] }) {
         </div>
       </div></section>
     </main>
-    <footer className="site-footer"><div className="container footer-inner"><a href="/" aria-label="Kotys Carpet — головна"><Wordmark /></a><div className="footer-right"><a href="#catalog" className="footer-link">Каталог</a><span>© {new Date().getFullYear()} Kotys Carpet</span></div></div></footer>
+    <footer id="contacts" className="site-footer">
+      <div className="container footer-inner">
+        <a href="/" aria-label="Kotys Carpet — головна"><Wordmark /></a>
+        <div>
+          <h2 className="footer-heading">Зв’язатися</h2>
+          <p className="footer-contact-name">Тетяна</p>
+          <a className="phone-button" href="tel:+380961332777" aria-label="Зателефонувати Тетяні: +380 96 133 27 77">
+            <Phone size={19} strokeWidth={1.6} aria-hidden="true" /><span>+380 96 133 27 77</span>
+          </a>
+        </div>
+        <div>
+          <h2 className="footer-heading">Соцмережі</h2>
+          <a className="footer-social-link" href="https://www.tiktok.com/@tani44ka1?_r=1&_t=ZS-9ANxcMN82ZM" target="_blank" rel="noopener noreferrer" aria-label="TikTok @tani44ka1 — відкрити в новій вкладці">
+            <span className="social-icon"><Music2 size={22} strokeWidth={1.6} aria-hidden="true" /></span>
+            <span><span className="social-title">TikTok</span><span className="social-handle">@tani44ka1</span></span>
+          </a>
+        </div>
+      </div>
+      <div className="container footer-bottom"><a href="#catalog" className="footer-link">Каталог</a><span>© {new Date().getFullYear()} Kotys Carpet</span></div>
+    </footer>
     <Dialog open={selected !== null} onOpenChange={(open) => { if (!open) setSelected(null); }}>
       <DialogContent className="product-modal" showCloseButton={false}>
         <DialogClose asChild><button className="modal-close" aria-label="Закрити інформацію про килим"><X size={20} /></button></DialogClose>

@@ -45,7 +45,14 @@ h1,h2,h3,p{margin-top:0}.hero h1{font-family:Georgia,serif;font-weight:400;font-
 .how-section{padding:62px 0 70px;background:var(--primary);color:#fff}.how-inner{display:grid;grid-template-columns:.8fr 1.8fr;gap:70px}.how-section .eyebrow{color:#edd5dc;margin-bottom:17px}
 .how-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}.step-number{display:block;color:#d8a9b5;font-size:.875rem;letter-spacing:.1em;margin-bottom:21px}
 .step-title{font-size:1rem;font-weight:500;margin-bottom:12px}.step-copy{color:#f0dfe4;font-size:.9375rem;line-height:1.8;margin-bottom:0}
-.site-footer{padding:35px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.footer-right{display:flex;gap:30px;align-items:center;font-size:.875rem;color:var(--muted-foreground)}
+.site-footer{padding:44px 0 22px}.footer-inner{display:grid;grid-template-columns:1fr 1.2fr 1fr;align-items:start;gap:36px}
+.footer-heading{font-size:.875rem;font-weight:600;letter-spacing:.07em;margin:0 0 14px;color:var(--muted-foreground)}
+.footer-contact-name{font-size:1rem;margin:0 0 10px}.phone-button{display:inline-flex;align-items:center;gap:11px;min-height:48px;padding:9px 14px;border:1px solid var(--border);border-radius:4px;font-size:1rem;color:var(--primary)}
+.phone-button:hover{background:var(--accent);border-color:var(--primary)}.phone-button svg{flex-shrink:0}
+.footer-social-link{display:inline-flex;align-items:center;gap:13px;min-height:56px;border-radius:4px}.footer-social-link:hover{color:var(--primary)}
+.social-icon{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--border);border-radius:50%;color:var(--primary);flex-shrink:0}
+.social-title{display:block;font-size:1rem}.social-handle{display:block;font-size:.875rem;color:var(--muted-foreground)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--border);padding-top:20px;margin-top:34px;font-size:.875rem;color:var(--muted-foreground)}
 .site-footer .wordmark-main{font-size:1.85rem}.site-footer .wordmark-sub{font-size:.75rem}
 .modal-close{position:absolute;right:16px;top:16px;width:42px;height:42px;padding:10px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--foreground)}
 .product-modal{grid-template-columns:1fr 1fr;gap:28px;padding:24px;max-width:min(860px,calc(100% - 32px)) !important;max-height:90dvh;overflow-y:auto;border-radius:8px}
@@ -79,8 +86,8 @@ h1,h2,h3,p{margin-top:0}.hero h1{font-family:Georgia,serif;font-weight:400;font-
  .hero-copy{max-width:450px;margin-bottom:25px}.hero-media img{aspect-ratio:1.38;border-radius:90px 3px 3px 3px}.catalog-section{padding:32px 0 45px}
  .section-heading{align-items:start;margin-bottom:25px}.catalog-count{padding-top:30px;white-space:nowrap}.catalog-empty{padding:28px 22px;gap:18px;align-items:start}.empty-icon{width:47px;height:47px}
  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}.product-name{font-size:1.2rem}.how-section{padding:38px 0 42px}.how-inner{gap:29px}
- .how-steps{grid-template-columns:1fr;gap:23px}.step-number{margin-bottom:6px}.step-title{margin-bottom:7px}.footer-inner{align-items:start}.footer-right{flex-direction:column;align-items:end;gap:12px;font-size:.8125rem}
+ .how-steps{grid-template-columns:1fr;gap:23px}.step-number{margin-bottom:6px}.step-title{margin-bottom:7px}.footer-inner{grid-template-columns:1fr;gap:28px}.site-footer{padding-top:34px}
  .product-modal{grid-template-columns:1fr;gap:15px;padding:18px}.detail-image{aspect-ratio:4/3}.detail-copy{padding:5px 0 0}.drawer-header,.drawer-body,.drawer-footer{padding-left:22px;padding-right:22px}
 }
-@media(max-width:370px){.container{width:calc(100% - 28px)}.cart-label{display:none}.product-grid{grid-template-columns:1fr}.catalog-empty{flex-direction:column}.footer-inner{flex-direction:column}.footer-right{align-items:start}}
+@media(max-width:370px){.container{width:calc(100% - 28px)}.cart-label{display:none}.product-grid{grid-template-columns:1fr}.catalog-empty{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}}
